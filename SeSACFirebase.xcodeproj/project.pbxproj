@@ -10,6 +10,10 @@
 		120E919A28F4EE0C00ED5518 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 120E919928F4EE0C00ED5518 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		120E919C28F4EE0C00ED5518 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 120E919B28F4EE0C00ED5518 /* FirebaseCrashlytics */; };
 		120E919E28F4EE0C00ED5518 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 120E919D28F4EE0C00ED5518 /* FirebaseMessaging */; };
+		1271DAD128F794140026A7A6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1271DAD028F794140026A7A6 /* Realm */; };
+		1271DAD328F794140026A7A6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1271DAD228F794140026A7A6 /* RealmSwift */; };
+		1271DAD528F799FE0026A7A6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271DAD428F799FE0026A7A6 /* Todo.swift */; };
+		1271DAD728F79BAB0026A7A6 /* MigrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271DAD628F79BAB0026A7A6 /* MigrationViewController.swift */; };
 		127D9B5E28ED15B600A6B08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9B5D28ED15B600A6B08B /* AppDelegate.swift */; };
 		127D9B6028ED15B600A6B08B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9B5F28ED15B600A6B08B /* SceneDelegate.swift */; };
 		127D9B6228ED15B600A6B08B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127D9B6128ED15B600A6B08B /* ViewController.swift */; };
@@ -21,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		120E919F28F4F23E00ED5518 /* SeSACFirebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SeSACFirebase.entitlements; sourceTree = "<group>"; };
+		1271DAD428F799FE0026A7A6 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		1271DAD628F79BAB0026A7A6 /* MigrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationViewController.swift; sourceTree = "<group>"; };
 		127D9B5A28ED15B600A6B08B /* SeSACFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127D9B5D28ED15B600A6B08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		127D9B5F28ED15B600A6B08B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,8 @@
 			files = (
 				120E919E28F4EE0C00ED5518 /* FirebaseMessaging in Frameworks */,
 				120E919A28F4EE0C00ED5518 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				1271DAD128F794140026A7A6 /* Realm in Frameworks */,
+				1271DAD328F794140026A7A6 /* RealmSwift in Frameworks */,
 				120E919C28F4EE0C00ED5518 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +82,8 @@
 				127D9B6828ED15B600A6B08B /* LaunchScreen.storyboard */,
 				127D9B6B28ED15B600A6B08B /* Info.plist */,
 				127D9B7128ED1DA500A6B08B /* GoogleService-Info.plist */,
+				1271DAD428F799FE0026A7A6 /* Todo.swift */,
+				1271DAD628F79BAB0026A7A6 /* MigrationViewController.swift */,
 			);
 			path = SeSACFirebase;
 			sourceTree = "<group>";
@@ -99,6 +109,8 @@
 				120E919928F4EE0C00ED5518 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				120E919B28F4EE0C00ED5518 /* FirebaseCrashlytics */,
 				120E919D28F4EE0C00ED5518 /* FirebaseMessaging */,
+				1271DAD028F794140026A7A6 /* Realm */,
+				1271DAD228F794140026A7A6 /* RealmSwift */,
 			);
 			productName = SeSACFirebase;
 			productReference = 127D9B5A28ED15B600A6B08B /* SeSACFirebase.app */;
@@ -130,6 +142,7 @@
 			mainGroup = 127D9B5128ED15B600A6B08B;
 			packageReferences = (
 				120E919828F4EE0C00ED5518 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1271DACF28F794140026A7A6 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 127D9B5B28ED15B600A6B08B /* Products */;
 			projectDirPath = "";
@@ -183,7 +196,9 @@
 			files = (
 				127D9B6228ED15B600A6B08B /* ViewController.swift in Sources */,
 				127D9B5E28ED15B600A6B08B /* AppDelegate.swift in Sources */,
+				1271DAD728F79BAB0026A7A6 /* MigrationViewController.swift in Sources */,
 				127D9B6028ED15B600A6B08B /* SceneDelegate.swift in Sources */,
+				1271DAD528F799FE0026A7A6 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +429,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		1271DACF28F794140026A7A6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.31.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -431,6 +454,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 120E919828F4EE0C00ED5518 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		1271DAD028F794140026A7A6 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1271DACF28F794140026A7A6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		1271DAD228F794140026A7A6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1271DACF28F794140026A7A6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

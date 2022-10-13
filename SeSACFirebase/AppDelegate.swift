@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import FirebaseMessaging
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        aboutRealmMigration()
         
         UIViewController.swizzleMethod()
         
@@ -69,6 +72,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    
+    func aboutRealmMigration() {
+        //deleteRealmIfMigrationNeeded: 마이그레이션이 필요한 경우 기존 렘 삭제(Realm Browser 닫고 다시 열기!), 개발할 때만..!!
+        //let config = Realm.Configuration(schemaVersion: 1, deleteRealmIfMigrationNeeded: true)
+        
+        //Schema 구조를 바꾼 이상.. 절대 못지우는 코드
+        let config = Realm.Configuration(schemaVersion: 6) { migration, oldSchemaVersion in
+            
+            //컬럼 단순 추가 삭제의 경우엔 별도 코드 필요 x
+            if oldSchemaVersion < 1 { } //내부 코드가 없을 경우, 무슨무슨 컬럼 추가 및 삭제 주석 처리
+            
+            if oldSchemaVersion < 2 { }
+            
+            if oldSchemaVersion < 3 {
+                migration.renameProperty(onType: Todo.className(), from: "importance", to: "favorite")
+            }
+            
+            if oldSchemaVersion < 4 {
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    
+                    guard let new = newObject else { return }
+                    guard let old = oldObject else { return }
+                    
+                    new["userDescription"] = "안녕하세요 \(old["title"]!)의 중요도는 \(old["favorite"]!)입니다"
+                }
+            }
+            
+            if oldSchemaVersion < 5 {
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let new = newObject else { return }
+                    new["count"] = 100
+                }
+
+            }
+            
+            if oldSchemaVersion < 6 {
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let new = newObject else { return }
+                    guard let old = oldObject else { return }
+                    
+                    //new optional, old optional
+                    new["favorite"] = old["favorite"]
+                }
+            }
+        }
+        
+        Realm.Configuration.defaultConfiguration = config
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
