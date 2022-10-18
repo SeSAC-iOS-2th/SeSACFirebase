@@ -21,6 +21,7 @@
 		127D9B6728ED15B600A6B08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127D9B6628ED15B600A6B08B /* Assets.xcassets */; };
 		127D9B6A28ED15B600A6B08B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127D9B6828ED15B600A6B08B /* LaunchScreen.storyboard */; };
 		127D9B7228ED1DA500A6B08B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 127D9B7128ED1DA500A6B08B /* GoogleService-Info.plist */; };
+		128CAF6C28FE4DB600B69F3A /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128CAF6B28FE4DB600B69F3A /* SampleCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		127D9B6928ED15B600A6B08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127D9B6B28ED15B600A6B08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		127D9B7128ED1DA500A6B08B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		128CAF6B28FE4DB600B69F3A /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				127D9B5F28ED15B600A6B08B /* SceneDelegate.swift */,
 				127D9B6128ED15B600A6B08B /* ViewController.swift */,
 				127D9B6328ED15B600A6B08B /* Main.storyboard */,
+				128CAF6B28FE4DB600B69F3A /* SampleCollectionViewController.swift */,
 				127D9B6628ED15B600A6B08B /* Assets.xcassets */,
 				127D9B6828ED15B600A6B08B /* LaunchScreen.storyboard */,
 				127D9B6B28ED15B600A6B08B /* Info.plist */,
@@ -198,6 +201,7 @@
 				127D9B5E28ED15B600A6B08B /* AppDelegate.swift in Sources */,
 				1271DAD728F79BAB0026A7A6 /* MigrationViewController.swift in Sources */,
 				127D9B6028ED15B600A6B08B /* SceneDelegate.swift in Sources */,
+				128CAF6C28FE4DB600B69F3A /* SampleCollectionViewController.swift in Sources */,
 				1271DAD528F799FE0026A7A6 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
